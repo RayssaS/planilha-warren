@@ -1,20 +1,12 @@
-
-function fizzBuzz(max) {
-    for (let i = 0; i <= max; i++) {
-        let mensagem = ""
-        if (i % 3 === 0 && i % 5 === 0) {
-            return 'FIZZBUZZ'
-        }
-        if (i % 3 === 0) {
-            return 'FIZZ'
-        }
-        else if (i % 5 === 0) {
-            return 'BUZZ'
-        }
-        else {
-            return String(max)
-        }
+// Arquivo fizzbuzz.js
+module.exports.fizzbuzz = function fizzbuzz(numero) {
+    if (numero % 3 === 0 && numero % 5 === 0) {
+        return "FizzBuzz";
+    } else if (numero % 3 === 0) {
+        return "Fizz";
+    } else if (numero % 5 === 0) {
+        return "Buzz";
+    } else {
+        return String(numero);
     }
 }
-
-module.exports = fizzBuzz
