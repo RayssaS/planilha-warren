@@ -1,0 +1,7 @@
+GET https://3000-rayssas-planilhawarren-pjrqlh9bhdg.ws-us63.gitpod.io
+###
+
+POST https://3000-rayssas-planilhawarren-pjrqlh9bhdg.ws-us63.gitpod.io
+content-type: application/json
+
+{"valor": 10}
