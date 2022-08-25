@@ -1,12 +1,12 @@
 const express = require('express');
-const TransacoesRepositorio = require('./Public/transacoes-repositorio');
+const TransacoesRepositorio = require('./transacoes-repositorio');
 const app = express()
 
 const port = 3000;
 
 app.use(express.static(`${__dirname}/Public`))
 app.use(express.json());
-app.use(express.static(`${__dirname}/Public`))
+
 
 app.get('/transacoes', (req, res) => {
     const repositorio = new TransacoesRepositorio()
