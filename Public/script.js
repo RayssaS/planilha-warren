@@ -45,7 +45,7 @@ async function buscarTransacoes() {
   const response = await fetch('/transacoes');
   const financas = await response.json();
 
-  // setSaldo(financas.saldo);
+  setSaldo(financas.saldo);
   setTransacoes(financas.transacoes);
 }
 

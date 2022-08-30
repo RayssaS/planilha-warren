@@ -9,12 +9,17 @@ const app = express()
 
 const port = 3000
 
+function mostraReq(req) {
+    console.log(`${req.method} ${req.url} ${JSON.stringify(req.body)}`)
+}
+
 // Permite acessar o req.body
 app.use(express.json());
 // "Serve" arquivos da pasta public
 app.use(express.static(`${__dirname}/Public`))
 
 app.get('/transacoes', async (req, res) => {
+    mostraReq(req)
     const repositorio = new TransacoesRepositorio()
     const transacoes = await repositorio.listarTransacoes()
 
@@ -34,6 +39,7 @@ app.get('/transacoes', async (req, res) => {
 })
 
 app.post('/transacoes', async (req, res) => {
+    mostraReq(req)
     const repositorio = new TransacoesRepositorio()
     const transacao = req.body
     await repositorio.criarTransacao(transacao)
