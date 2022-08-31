@@ -2,12 +2,5 @@ node_modules
 *.log
 .gitpod.yml
 .env
-.core1700
-.core2388
-.core5015
-.core7074
-.core7182
-.core7832
-.input
-.output
+
 
